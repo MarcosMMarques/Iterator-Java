@@ -8,7 +8,7 @@ package design.patterns.iterator;
  *
  * @author Marcos
  */
-public interface Iterator {
+public interface Iterator<E> {
 	boolean hasNext();
-	Object next();
+	E next();
 }
