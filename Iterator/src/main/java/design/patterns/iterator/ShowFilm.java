@@ -22,7 +22,7 @@ public class ShowFilm {
 		
 	while (filmIterator.hasNext()) {
             FilmItem filmItem = (FilmItem)filmIterator.next();
-            System.out.println(filmItem.name + " = R$ " + filmItem.price);
+            System.out.println(filmItem.getName() + " = R$ " + filmItem.getPrice());
 	}
     }
 }

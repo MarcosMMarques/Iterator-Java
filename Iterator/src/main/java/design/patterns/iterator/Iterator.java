@@ -9,6 +9,6 @@ package design.patterns.iterator;
  * @author Marcos
  */
 public interface Iterator<E> {
-	boolean hasNext();
-	E next();
+    public boolean hasNext();
+    public E next();
 }

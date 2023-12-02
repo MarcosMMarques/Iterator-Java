@@ -8,25 +8,34 @@ package design.patterns.iterator;
  *
  * @author Marcos
  */
-public class FilmIterator implements Iterator{
-    FilmItem[] itens;
-    int position = 0;
+public class FilmIterator implements Iterator<FilmItem>{
+    private FilmItem[] itens;
+    private int position = 0;
 	
-	public FilmIterator(FilmItem[] itens) {
-		this.itens = itens;
-	}
+    public FilmIterator(FilmItem[] itens) {
+	setItens(itens);
+    }
 
-	public Object next() {
-		FilmItem filmItem = itens[position];
-		position++;
-		return filmItem;
-	}
+    public FilmItem[] getItens() {
+        return itens;
+    }
 
-	public boolean hasNext() {
-		if (position >= itens.length || itens[position] == null) {
-			return false;
-		} else {
-			return true;
-		}
+    public void setItens(FilmItem[] itens) {
+        this.itens = itens;
+    }
+
+    @Override
+    public FilmItem next() {
+	FilmItem filmItem = itens[position++];
+	return filmItem;
+    }
+
+    @Override
+    public boolean hasNext() {
+	if (position >= itens.length || itens[position] == null) {
+            return false;
+	} else {
+            return true;
 	}
+    }
 }

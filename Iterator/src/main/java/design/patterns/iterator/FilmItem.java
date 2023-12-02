@@ -9,15 +9,27 @@ package design.patterns.iterator;
  * @author Marcos
  */
 public class FilmItem {
-    String name;
-    double price;
+    private String name;
+    private double price;
 	
-    FilmItem(String name, double price){
-	this.name = name;
-	this.price = price;
+    public FilmItem(String name, double price){
+	setName(name);
+	setPrice(price);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setPrice(double price) {
 	this.price = price;
+    }
+    
+    public double getPrice() {
+        return price;
     }
 }
