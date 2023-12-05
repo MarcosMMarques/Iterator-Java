@@ -18,10 +18,10 @@ public class ShowFilm {
         filmItens[4] = new FilmItem("Filme do Pelé", 7);
         filmItens[5] = new FilmItem("Ultima Aparição", 10);
 		
-	Iterator filmIterator = new FilmIterator(filmItens);
+	FilmIterator filmIterator = new FilmIterator(filmItens);
 		
 	while (filmIterator.hasNext()) {
-            FilmItem filmItem = (FilmItem)filmIterator.next();
+            FilmItem filmItem = filmIterator.next();
             System.out.println(filmItem.getName() + " = R$ " + filmItem.getPrice());
 	}
     }
